@@ -15,16 +15,8 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!firstName && !lastName) {
+    if (!firstName || !lastName) {
       setFullName("");
-      return;
-    }
-    else if (!firstName) {
-      setFullName(lastName);
-      return;
-    }
-    else if (!lastName) {
-      setFullName(firstName);
       return;
     }
     let res = firstName + " " + lastName;
